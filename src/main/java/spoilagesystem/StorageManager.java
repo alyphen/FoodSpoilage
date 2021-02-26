@@ -146,7 +146,11 @@ public class StorageManager {
     public void saveConfigDefaults() {
         FoodSpoilage.getInstance().getConfig().addDefault("version", FoodSpoilage.getInstance().getVersion());
 
-        SPOIL_TIMES.forEach((key, value) -> FoodSpoilage.getInstance().getConfig().addDefault(key.toString(), value));
+        SPOIL_TIMES.forEach((key, value) -> {
+            if (key != null) {
+                FoodSpoilage.getInstance().getConfig().addDefault(key.toString(), value);
+            }
+        });
 
         FoodSpoilage.getInstance().getConfig().addDefault("createdText", createdText);
         FoodSpoilage.getInstance().getConfig().addDefault("expiryDateText", expiryDateText);
