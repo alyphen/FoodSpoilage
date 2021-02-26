@@ -5,7 +5,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.FurnaceSmeltEvent;
 import org.bukkit.inventory.ItemStack;
-import spoilagesystem.FoodSpoilage;
 import spoilagesystem.StorageManager;
 import spoilagesystem.TimeStamper;
 

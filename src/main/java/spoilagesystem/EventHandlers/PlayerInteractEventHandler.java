@@ -5,7 +5,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
-import spoilagesystem.FoodSpoilage;
 import spoilagesystem.SpoiledFoodFactory;
 import spoilagesystem.TimeStamper;
 
