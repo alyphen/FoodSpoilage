@@ -1,5 +1,6 @@
 package spoilagesystem;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import spoilagesystem.EventHandlers.*;
 
@@ -54,7 +55,9 @@ public class EventRegistry {
         }
 
         try {
-            manager.registerEvents(new BlockCookEventHandler(), mainInstance);
+            if (!Bukkit.getVersion().contains("1.12.2")) {
+                manager.registerEvents(new BlockCookEventHandler(), mainInstance);
+            }
         } catch(Exception e) {
             System.out.println("BlockCookEventHandler was not able to be registered.");
         }
