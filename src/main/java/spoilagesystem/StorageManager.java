@@ -1,5 +1,6 @@
 package spoilagesystem;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 
 import java.io.File;
@@ -609,84 +610,89 @@ public class StorageManager {
 
         switch(materialName) {
             case "BEEF":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = BEEF;
-                } catch(Exception e) {
+                }
+                else {
                     toReturn = LEGACY_RAW_BEEF;
                 }
                 return toReturn;
             case "PORKCHOP":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = PORKCHOP;
-                } catch(Exception e) {
+                }
+                else {
                     toReturn = LEGACY_PORK;
                 }
                 return toReturn;
             case "CHICKEN":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = CHICKEN;
-                } catch(Exception e) {
+                }
+                else {
                     toReturn = LEGACY_RAW_CHICKEN;
                 }
                 return toReturn;
             case "COD":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = COD;
-                } catch(Exception ignored) {}
+                }
                 return toReturn;
             case "SALMON":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = SALMON;
-                } catch(Exception ignored) {}
+                }
                 return toReturn;
             case "TROPICAL_FISH":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = TROPICAL_FISH;
-                } catch(Exception ignored) {}
+                }
                 return toReturn;
             case "PUFFERFISH":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = PUFFERFISH;
-                } catch(Exception ignored) {}
+                }
                 return toReturn;
             case "MUSHROOM_STEW":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = MUSHROOM_STEW;
-                } catch(Exception e) {
+                }
+                else {
                     toReturn = LEGACY_MUSHROOM_SOUP;
                 }
                 return toReturn;
             case "COOKED_SALMON":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = COOKED_SALMON;
-                } catch(Exception ignored) {}
+                }
                 return toReturn;
             case "COOKED_COD":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = COOKED_COD;
-                } catch(Exception ignored) {}
+                }
                 return toReturn;
             case "NETHER_WART":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = NETHER_WART;
-                } catch(Exception e) {
+                }
+                else {
                     toReturn = LEGACY_NETHER_WARTS;
                 }
                 return toReturn;
             case "MELON_SLICE":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = MELON_SLICE;
-                } catch(Exception ignored) {}
+                }
                 return toReturn;
             case "DRIED_KELP":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = DRIED_KELP;
-                } catch(Exception ignored) {}
+                }
                 return toReturn;
             case "SWEET_BERRIES":
-                try {
+                if (!Bukkit.getVersion().contains("1.12.2")) {
                     toReturn = SWEET_BERRIES;
-                } catch(Exception ignored) {}
+                }
                 return toReturn;
         }
         return null;
