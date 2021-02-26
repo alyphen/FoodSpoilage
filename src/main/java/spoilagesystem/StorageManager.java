@@ -30,32 +30,32 @@ public class StorageManager {
         put(POTATO, 48);
         put(CARROT, 48);
         put(BEETROOT, 48);
-        put(BEEF, 24);
-        put(PORKCHOP, 24);
-        put(CHICKEN, 24);
-        put(COD, 24);
-        put(SALMON, 24);
+        put(attemptToGetMaterial("BEEF"), 24);
+        put(attemptToGetMaterial("PORKCHOP"), 24);
+        put(attemptToGetMaterial("CHICKEN"), 24);
+        put(attemptToGetMaterial("COD"), 24);
+        put(attemptToGetMaterial("SALMON"), 24);
         put(MUTTON, 24);
         put(RABBIT, 24);
-        put(TROPICAL_FISH, 24);
-        put(PUFFERFISH, 24);
-        put(MUSHROOM_STEW, 72);
+        put(attemptToGetMaterial("TROPICAL_FISH"), 24);
+        put(attemptToGetMaterial("PUFFERFISH"), 24);
+        put(attemptToGetMaterial("MUSHROOM_STEW"), 72);
         put(RABBIT_STEW, 96);
         put(BEETROOT_SOUP, 72);
         put(COOKED_BEEF, 72);
         put(COOKED_PORKCHOP, 72);
         put(COOKED_CHICKEN, 72);
-        put(COOKED_SALMON, 72);
+        put(attemptToGetMaterial("COOKED_SALMON"), 72);
         put(COOKED_MUTTON, 72);
         put(COOKED_RABBIT, 72);
-        put(COOKED_COD, 72);
+        put(attemptToGetMaterial("COOKED_COD"), 72);
         put(WHEAT, 48);
         put(MELON, 48);
         put(PUMPKIN, 48);
         put(BROWN_MUSHROOM, 48);
         put(RED_MUSHROOM, 48);
-        put(NETHER_WART, 168);
-        put(MELON_SLICE, 24);
+        put(attemptToGetMaterial("NETHER_WART"), 168);
+        put(attemptToGetMaterial("MELON_SLICE"), 24);
         put(CAKE, 24);
         put(PUMPKIN_PIE, 24);
         put(SUGAR, 72);
@@ -65,9 +65,9 @@ public class StorageManager {
         put(COOKIE, 94);
         put(POISONOUS_POTATO, 24);
         put(CHORUS_FRUIT, 94);
-        put(DRIED_KELP, 72);
+        put(attemptToGetMaterial("DRIED_KELP"), 72);
         put(BAKED_POTATO, 94);
-        put(SWEET_BERRIES, 48);
+        put(attemptToGetMaterial("SWEET_BERRIES"), 48);
     }};
 
     public String createdText = "Created:";
@@ -163,32 +163,32 @@ public class StorageManager {
         SPOIL_TIMES.put(POTATO, FoodSpoilage.getInstance().getConfig().getInt("Potato"));
         SPOIL_TIMES.put(CARROT, FoodSpoilage.getInstance().getConfig().getInt("Carrot"));
         SPOIL_TIMES.put(BEETROOT, FoodSpoilage.getInstance().getConfig().getInt("Beetroot"));
-        SPOIL_TIMES.put(BEEF, FoodSpoilage.getInstance().getConfig().getInt("Beef"));
-        SPOIL_TIMES.put(PORKCHOP, FoodSpoilage.getInstance().getConfig().getInt("Porkchop"));
-        SPOIL_TIMES.put(CHICKEN, FoodSpoilage.getInstance().getConfig().getInt("Chicken"));
-        SPOIL_TIMES.put(COD, FoodSpoilage.getInstance().getConfig().getInt("Cod"));
-        SPOIL_TIMES.put(SALMON, FoodSpoilage.getInstance().getConfig().getInt("Salmon"));
+        SPOIL_TIMES.put(attemptToGetMaterial("BEEF"), FoodSpoilage.getInstance().getConfig().getInt("Beef"));
+        SPOIL_TIMES.put(attemptToGetMaterial("PORKCHOP"), FoodSpoilage.getInstance().getConfig().getInt("Porkchop"));
+        SPOIL_TIMES.put(attemptToGetMaterial("CHICKEN"), FoodSpoilage.getInstance().getConfig().getInt("Chicken"));
+        SPOIL_TIMES.put(attemptToGetMaterial("COD"), FoodSpoilage.getInstance().getConfig().getInt("Cod"));
+        SPOIL_TIMES.put(attemptToGetMaterial("SALMON"), FoodSpoilage.getInstance().getConfig().getInt("Salmon"));
         SPOIL_TIMES.put(MUTTON, FoodSpoilage.getInstance().getConfig().getInt("Mutton"));
         SPOIL_TIMES.put(RABBIT, FoodSpoilage.getInstance().getConfig().getInt("Rabbit"));
-        SPOIL_TIMES.put(TROPICAL_FISH, FoodSpoilage.getInstance().getConfig().getInt("Tropical_Fish"));
-        SPOIL_TIMES.put(PUFFERFISH, FoodSpoilage.getInstance().getConfig().getInt("Pufferfish"));
-        SPOIL_TIMES.put(MUSHROOM_STEW, FoodSpoilage.getInstance().getConfig().getInt("Mushroom_Stew"));
+        SPOIL_TIMES.put(attemptToGetMaterial("TROPICAL_FISH"), FoodSpoilage.getInstance().getConfig().getInt("Tropical_Fish"));
+        SPOIL_TIMES.put(attemptToGetMaterial("PUFFERFISH"), FoodSpoilage.getInstance().getConfig().getInt("Pufferfish"));
+        SPOIL_TIMES.put(attemptToGetMaterial("MUSHROOM_STEW"), FoodSpoilage.getInstance().getConfig().getInt("Mushroom_Stew"));
         SPOIL_TIMES.put(RABBIT_STEW, FoodSpoilage.getInstance().getConfig().getInt("Rabbit_Stew"));
         SPOIL_TIMES.put(BEETROOT_SOUP, FoodSpoilage.getInstance().getConfig().getInt("Beetroot_Soup"));
         SPOIL_TIMES.put(COOKED_BEEF, FoodSpoilage.getInstance().getConfig().getInt("Cooked_Beef"));
         SPOIL_TIMES.put(COOKED_PORKCHOP, FoodSpoilage.getInstance().getConfig().getInt("Cooked_Porkchop"));
         SPOIL_TIMES.put(COOKED_CHICKEN, FoodSpoilage.getInstance().getConfig().getInt("Cooked_Chicken"));
-        SPOIL_TIMES.put(COOKED_SALMON, FoodSpoilage.getInstance().getConfig().getInt("Cooked_Salmon"));
+        SPOIL_TIMES.put(attemptToGetMaterial("COOKED_SALMON"), FoodSpoilage.getInstance().getConfig().getInt("Cooked_Salmon"));
         SPOIL_TIMES.put(COOKED_MUTTON, FoodSpoilage.getInstance().getConfig().getInt("Cooked_Mutton"));
         SPOIL_TIMES.put(COOKED_RABBIT, FoodSpoilage.getInstance().getConfig().getInt("Cooked_Rabbit"));
-        SPOIL_TIMES.put(COOKED_COD, FoodSpoilage.getInstance().getConfig().getInt("Cooked_Cod"));
+        SPOIL_TIMES.put(attemptToGetMaterial("COOKED_COD"), FoodSpoilage.getInstance().getConfig().getInt("Cooked_Cod"));
         SPOIL_TIMES.put(WHEAT, FoodSpoilage.getInstance().getConfig().getInt("Wheat"));
         SPOIL_TIMES.put(MELON, FoodSpoilage.getInstance().getConfig().getInt("Melon"));
         SPOIL_TIMES.put(PUMPKIN, FoodSpoilage.getInstance().getConfig().getInt("Pumpkin"));
         SPOIL_TIMES.put(BROWN_MUSHROOM, FoodSpoilage.getInstance().getConfig().getInt("Brown_Mushroom"));
         SPOIL_TIMES.put(RED_MUSHROOM, FoodSpoilage.getInstance().getConfig().getInt("Red_Mushroom"));
-        SPOIL_TIMES.put(NETHER_WART, FoodSpoilage.getInstance().getConfig().getInt("Nether_Wart"));
-        SPOIL_TIMES.put(MELON_SLICE, FoodSpoilage.getInstance().getConfig().getInt("Melon_Slice"));
+        SPOIL_TIMES.put(attemptToGetMaterial("NETHER_WART"), FoodSpoilage.getInstance().getConfig().getInt("Nether_Wart"));
+        SPOIL_TIMES.put(attemptToGetMaterial("MELON_SLICE"), FoodSpoilage.getInstance().getConfig().getInt("Melon_Slice"));
         SPOIL_TIMES.put(CAKE, FoodSpoilage.getInstance().getConfig().getInt("Cake"));
         SPOIL_TIMES.put(PUMPKIN_PIE, FoodSpoilage.getInstance().getConfig().getInt("Pumpkin_Pie"));
         SPOIL_TIMES.put(SUGAR, FoodSpoilage.getInstance().getConfig().getInt("Sugar"));
@@ -198,9 +198,9 @@ public class StorageManager {
         SPOIL_TIMES.put(COOKIE, FoodSpoilage.getInstance().getConfig().getInt("Cookie"));
         SPOIL_TIMES.put(POISONOUS_POTATO, FoodSpoilage.getInstance().getConfig().getInt("Poisonous_Potato"));
         SPOIL_TIMES.put(CHORUS_FRUIT, FoodSpoilage.getInstance().getConfig().getInt("Chorus_Fruit"));
-        SPOIL_TIMES.put(DRIED_KELP, FoodSpoilage.getInstance().getConfig().getInt("Dried_Kelp"));
+        SPOIL_TIMES.put(attemptToGetMaterial("DRIED_KELP"), FoodSpoilage.getInstance().getConfig().getInt("Dried_Kelp"));
         SPOIL_TIMES.put(BAKED_POTATO, FoodSpoilage.getInstance().getConfig().getInt("Baked_Potato"));
-        SPOIL_TIMES.put(SWEET_BERRIES, FoodSpoilage.getInstance().getConfig().getInt("Sweet_Berries"));
+        SPOIL_TIMES.put(attemptToGetMaterial("SWEET_BERRIES"), FoodSpoilage.getInstance().getConfig().getInt("Sweet_Berries"));
 
         createdText = FoodSpoilage.getInstance().getConfig().getString("createdText");
         expiryDateText = FoodSpoilage.getInstance().getConfig().getString("expiryDateText");
@@ -585,5 +585,110 @@ public class StorageManager {
         } catch (FileNotFoundException e) {
             System.out.println("There was a problem loading the food spoilage text!");
         }
+    }
+
+    public static Material attemptToGetMaterial(String materialName) {
+
+        // the following are not supported in 1.12.2
+        // BEEF
+        // PORKCHOP
+        // CHICKEN
+        // COD
+        // SALMON
+        // TROPICAL_FISH
+        // PUFFERFISH
+        // MUSHROOM_STEW
+        // COOKED_SALMON
+        // COOKED_COD
+        // NETHER_WART
+        // MELON_SLICE
+        // DRIED_KELP
+        // SWEET_BERRIES
+
+        Material toReturn = null;
+
+        switch(materialName) {
+            case "BEEF":
+                try {
+                    toReturn = BEEF;
+                } catch(Exception e) {
+                    toReturn = LEGACY_RAW_BEEF;
+                }
+                return toReturn;
+            case "PORKCHOP":
+                try {
+                    toReturn = PORKCHOP;
+                } catch(Exception e) {
+                    toReturn = LEGACY_PORK;
+                }
+                return toReturn;
+            case "CHICKEN":
+                try {
+                    toReturn = CHICKEN;
+                } catch(Exception e) {
+                    toReturn = LEGACY_RAW_CHICKEN;
+                }
+                return toReturn;
+            case "COD":
+                try {
+                    toReturn = COD;
+                } catch(Exception ignored) {}
+                return toReturn;
+            case "SALMON":
+                try {
+                    toReturn = SALMON;
+                } catch(Exception ignored) {}
+                return toReturn;
+            case "TROPICAL_FISH":
+                try {
+                    toReturn = TROPICAL_FISH;
+                } catch(Exception ignored) {}
+                return toReturn;
+            case "PUFFERFISH":
+                try {
+                    toReturn = PUFFERFISH;
+                } catch(Exception ignored) {}
+                return toReturn;
+            case "MUSHROOM_STEW":
+                try {
+                    toReturn = MUSHROOM_STEW;
+                } catch(Exception e) {
+                    toReturn = LEGACY_MUSHROOM_SOUP;
+                }
+                return toReturn;
+            case "COOKED_SALMON":
+                try {
+                    toReturn = COOKED_SALMON;
+                } catch(Exception ignored) {}
+                return toReturn;
+            case "COOKED_COD":
+                try {
+                    toReturn = COOKED_COD;
+                } catch(Exception ignored) {}
+                return toReturn;
+            case "NETHER_WART":
+                try {
+                    toReturn = NETHER_WART;
+                } catch(Exception e) {
+                    toReturn = LEGACY_NETHER_WARTS;
+                }
+                return toReturn;
+            case "MELON_SLICE":
+                try {
+                    toReturn = MELON_SLICE;
+                } catch(Exception ignored) {}
+                return toReturn;
+            case "DRIED_KELP":
+                try {
+                    toReturn = DRIED_KELP;
+                } catch(Exception ignored) {}
+                return toReturn;
+            case "SWEET_BERRIES":
+                try {
+                    toReturn = SWEET_BERRIES;
+                } catch(Exception ignored) {}
+                return toReturn;
+        }
+        return null;
     }
 }
