@@ -614,7 +614,7 @@ public class StorageManager {
                     toReturn = BEEF;
                 }
                 else {
-                    toReturn = LEGACY_RAW_BEEF;
+                    toReturn = MUTTON; // REPLACEMENT
                 }
                 return toReturn;
             case "PORKCHOP":
@@ -622,7 +622,7 @@ public class StorageManager {
                     toReturn = PORKCHOP;
                 }
                 else {
-                    toReturn = LEGACY_PORK;
+                    toReturn = MUTTON; // REPLACEMENT
                 }
                 return toReturn;
             case "CHICKEN":
@@ -630,7 +630,7 @@ public class StorageManager {
                     toReturn = CHICKEN;
                 }
                 else {
-                    toReturn = LEGACY_RAW_CHICKEN;
+                    toReturn = MUTTON; // REPLACEMENT
                 }
                 return toReturn;
             case "COD":
@@ -658,7 +658,7 @@ public class StorageManager {
                     toReturn = MUSHROOM_STEW;
                 }
                 else {
-                    toReturn = LEGACY_MUSHROOM_SOUP;
+                    toReturn = RABBIT_STEW; // REPLACEMENT
                 }
                 return toReturn;
             case "COOKED_SALMON":
@@ -676,7 +676,7 @@ public class StorageManager {
                     toReturn = NETHER_WART;
                 }
                 else {
-                    toReturn = LEGACY_NETHER_WARTS;
+                    toReturn = BROWN_MUSHROOM; // REPLACEMENT
                 }
                 return toReturn;
             case "MELON_SLICE":
