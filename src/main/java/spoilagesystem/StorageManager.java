@@ -44,7 +44,7 @@ public class StorageManager {
         put(RABBIT_STEW, 96);
         put(BEETROOT_SOUP, 72);
         put(COOKED_BEEF, 72);
-        put(COOKED_PORKCHOP, 72);
+        put(attemptToGetMaterial("COOKED_PORKCHOP"), 72);
         put(COOKED_CHICKEN, 72);
         put(attemptToGetMaterial("COOKED_SALMON"), 72);
         put(COOKED_MUTTON, 72);
@@ -177,7 +177,7 @@ public class StorageManager {
         SPOIL_TIMES.put(RABBIT_STEW, FoodSpoilage.getInstance().getConfig().getInt("Rabbit_Stew"));
         SPOIL_TIMES.put(BEETROOT_SOUP, FoodSpoilage.getInstance().getConfig().getInt("Beetroot_Soup"));
         SPOIL_TIMES.put(COOKED_BEEF, FoodSpoilage.getInstance().getConfig().getInt("Cooked_Beef"));
-        SPOIL_TIMES.put(COOKED_PORKCHOP, FoodSpoilage.getInstance().getConfig().getInt("Cooked_Porkchop"));
+        SPOIL_TIMES.put(attemptToGetMaterial("COOKED_PORKCHOP"), FoodSpoilage.getInstance().getConfig().getInt("Cooked_Porkchop"));
         SPOIL_TIMES.put(COOKED_CHICKEN, FoodSpoilage.getInstance().getConfig().getInt("Cooked_Chicken"));
         SPOIL_TIMES.put(attemptToGetMaterial("COOKED_SALMON"), FoodSpoilage.getInstance().getConfig().getInt("Cooked_Salmon"));
         SPOIL_TIMES.put(COOKED_MUTTON, FoodSpoilage.getInstance().getConfig().getInt("Cooked_Mutton"));
@@ -599,6 +599,7 @@ public class StorageManager {
         // TROPICAL_FISH
         // PUFFERFISH
         // MUSHROOM_STEW
+        // COOKED_PORKCHOP
         // COOKED_SALMON
         // COOKED_COD
         // NETHER_WART
@@ -659,6 +660,14 @@ public class StorageManager {
                 }
                 else {
                     toReturn = RABBIT_STEW; // REPLACEMENT
+                }
+                return toReturn;
+            case "COOKED_PORKCHOP":
+                if (!Bukkit.getVersion().contains("1.12.2")) {
+                    toReturn = COOKED_PORKCHOP;
+                }
+                else {
+                    toReturn = COOKED_BEEF; // REPLACEMENT
                 }
                 return toReturn;
             case "COOKED_SALMON":
