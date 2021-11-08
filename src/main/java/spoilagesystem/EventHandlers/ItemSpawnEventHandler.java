@@ -15,7 +15,7 @@ public class ItemSpawnEventHandler implements Listener {
 
         ItemStack item = event.getEntity().getItemStack();
         Material type = item.getType();
-        int time = ConfigManager.getInstance().getTime(type);
+        int time = ConfigManager.getInstance().getDays(type);
 
         // if timestamp not already assigned
         if (time != 0 && !TimeStampManager.getInstance().timeStampAssigned(item)) {

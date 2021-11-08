@@ -28,7 +28,7 @@ public class ConfigManager {
         put(WHEAT, 0.3f);
     }};
 
-    private static final Map<String, Integer> DEFAULT_SPOIL_TIMES = new HashMap<String, Integer>() {{
+    private static final Map<String, Integer> DEFAULT_SPOIL_DAYS = new HashMap<String, Integer>() {{
         put("BREAD", 24);
         put("POTATO", 48);
         put("CARROT", 48);
@@ -123,7 +123,7 @@ public class ConfigManager {
      * @return int time.
      * @see org.bukkit.configuration.MemorySection#getInt(String)
      */
-    public int getTime(Material type) {
+    public int getDays(Material type) {
         if (debug) {
             System.out.println("Getting the spoil-time for " + type.name());
         }
@@ -201,7 +201,7 @@ public class ConfigManager {
     public Map<Material, Integer> getSpoilTimes() {
         final HashMap<Material, Integer> spoilTimes = new HashMap<>();
         for (Material value : values()) { // Loop through all the materials.
-            int time = getTime(value); // get the time.
+            int time = getDays(value); // get the time.
             if (time != 0) spoilTimes.put(value, time); // if it isn't 0, add it
         }
         return spoilTimes; // Return output.
@@ -254,7 +254,7 @@ public class ConfigManager {
         }
 
         // add defaults if they don't exist
-        DEFAULT_SPOIL_TIMES.forEach((key, value) -> {
+        DEFAULT_SPOIL_DAYS.forEach((key, value) -> {
             if (!config.isInt(key)) {
                 config.addDefault(key, value);
             }
@@ -286,7 +286,7 @@ public class ConfigManager {
     public void create() {
         final FileConfiguration config = FoodSpoilage.getInstance().getConfig();
         config.set("version", FoodSpoilage.getInstance().getVersion());
-        DEFAULT_SPOIL_TIMES.forEach(config::set);
+        DEFAULT_SPOIL_DAYS.forEach(config::set);
         config.set("expiryDateText", expiryDateText);
         config.set("valuesLoadedText", valuesLoadedText);
         config.set("noPermsText", noPermsText);

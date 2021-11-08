@@ -31,7 +31,7 @@ public class TimeStampManager {
         return instance;
     }
 
-    String pattern = "MM/dd/yyyy HH";
+    String pattern = "MM/dd/yyyy";
 
     public ItemStack assignTimeStamp(ItemStack item, int hoursUntilSpoilage) {
         ItemMeta meta = item.getItemMeta();
@@ -85,16 +85,16 @@ public class TimeStampManager {
 
         if (timestamp != null) {
 
-            DateFormat df = new SimpleDateFormat(pattern + ":mm:ss");
+            DateFormat df = new SimpleDateFormat(pattern + "hh:mm:ss");
 
-            timestamp = timestamp + ":01:01";
+            timestamp = timestamp + "01:01:01";
             timestamp = timestamp.substring(2);
 
             Date date = null;
             try {
                 date = df.parse(timestamp);
             } catch (Exception e) {
-                System.out.println("Something went wrong parsing timestamp " + timestamp + " with pattern " + pattern + ":mm:ss");
+                System.out.println("Something went wrong parsing timestamp " + timestamp + " with pattern " + pattern + "hh:mm:ss");
             }
 
             if (date != null) {

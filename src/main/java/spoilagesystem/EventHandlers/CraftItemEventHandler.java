@@ -16,7 +16,7 @@ public class CraftItemEventHandler implements Listener {
 
         ItemStack item = event.getCurrentItem();
         Material type = item.getType();
-        int time = ConfigManager.getInstance().getTime(type);
+        int time = ConfigManager.getInstance().getDays(type);
         if (time != 0) {
             cancelIfShiftClick(event);
             int spoilAmt = ConfigManager.getInstance().getSpoilChance(type, item.getAmount());

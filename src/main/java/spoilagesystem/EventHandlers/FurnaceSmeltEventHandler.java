@@ -15,7 +15,7 @@ public class FurnaceSmeltEventHandler implements Listener {
 
         ItemStack item = event.getResult();
         Material type = item.getType();
-        int time = ConfigManager.getInstance().getTime(type);
+        int time = ConfigManager.getInstance().getDays(type);
 
         if (time != 0) {
             event.setResult(TimeStampManager.getInstance().assignTimeStamp(item, time));
