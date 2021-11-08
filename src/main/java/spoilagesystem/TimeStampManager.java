@@ -33,14 +33,14 @@ public class TimeStampManager {
 
     String pattern = "MM/dd/yyyy";
 
-    public ItemStack assignTimeStamp(ItemStack item, int hoursUntilSpoilage) {
+    public ItemStack assignTimeStamp(ItemStack item, int daysUntilSpoilage) {
         ItemMeta meta = item.getItemMeta();
 
         if (meta != null) {
             meta.setLore(asList(
                     "",
                     ChatColor.WHITE + ConfigManager.getInstance().expiryDateText,
-                    ChatColor.WHITE + getDateStringPlusTime(hoursUntilSpoilage)
+                    ChatColor.WHITE + getDateString(daysUntilSpoilage)
             ));
 
             item.setItemMeta(meta);
@@ -53,14 +53,8 @@ public class TimeStampManager {
         return Calendar.getInstance().getTime();
     }
 
-    private String getDateStringPlusTime(int hours) {
-        return new SimpleDateFormat(pattern).format(getDatePlusTime(hours));
-    }
-
-    private Date getDatePlusTime(int hours) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(HOUR_OF_DAY, hours);
-        return calendar.getTime();
+    private String getDateString(int daysUntilSpoilage) {
+        return new SimpleDateFormat(pattern).format(daysUntilSpoilage);
     }
 
     public boolean timeStampAssigned(ItemStack item) {
